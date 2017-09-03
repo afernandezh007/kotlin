@@ -4,7 +4,7 @@ package oo
  * Created by neome on 26/08/2017.
  */
 
-class Person(val name: String, var age: Int) {
+open class Person(open val name: String, open var age: Int) {
 
     init {
         println("Object was created")
@@ -18,23 +18,34 @@ class Person(val name: String, var age: Int) {
         println("hello $name!")
     }
 
-    fun getYearOfBirth(): Int {
+    /*fun getYearOfBirth(): Int {
         return 2017 - age;
-    }
+    }*/
 
-    fun getYearOfBirth2() = 2016 - age
+    fun getYearOfBirth() = 2016 - age
 
 }
 
+class Student(override val name: String, override var age: Int) : Person(name, age) {
+
+    fun isIntelligent() = true
+}
+
+class Employee(override val name: String, override var age: Int) : Person(name, age) {
+
+    fun receivePayment() {
+        println("Received payment.")
+    }
+}
+
 fun main(args: Array<String>) {
-    val person = Person("Jack", 17)
 
+    val student = Student("John", 25)
+    student.speak()
 
-    person.speak()
-    person.greet("world")
-    println(person.getYearOfBirth())
+    println(student.isIntelligent())
 
-    println(person.name)
-    println(person.age)
-
+    val employee = Employee("Mary", 32)
+    employee.getYearOfBirth()
+    employee.receivePayment()
 }
