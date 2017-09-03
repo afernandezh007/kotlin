@@ -1,4 +1,4 @@
-package challenge.`01`
+package challenge.c01
 
 import java.util.*
 

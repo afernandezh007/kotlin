@@ -1,4 +1,4 @@
-package challenge.`03`
+package challenge.c03
 
 /**
  * Created by neome on 14/08/2017.

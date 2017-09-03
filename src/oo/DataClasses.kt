@@ -1,7 +1,7 @@
 package oo
 
 /**
- * Created by neome on 03/09/2017.
+ * Created by neome on c03/09/2017.
  */
 class Book(val title: String, val author: String, val publicationYear: Int, var price: Double) {
 
