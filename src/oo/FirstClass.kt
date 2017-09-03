@@ -1,5 +1,10 @@
 package oo
 
+import functions.getCurrentDate
+import oo.Color.BLUE
+import java.math.BigInteger
+import java.util.*
+
 /**
  * Created by neome on 26/08/2017.
  */
@@ -8,6 +13,10 @@ abstract class Person(open val name: String, open var age: Int) {
 
     init {
         println("Object was created")
+        val bigInt = BigInteger("3")
+        val currentDate = getCurrentDate()
+        val blue = BLUE
+        val date = Date()
     }
 
     abstract fun speak()
