@@ -13,7 +13,7 @@ interface Buildable {
     fun build()
 }
 
-class Car(val color: String) : Driveable, Buildable {
+class Car(val color: Color) : Driveable, Buildable {
     override val timeRequired: Int = 120
 
     override fun drive() {
@@ -35,7 +35,8 @@ class MotorCycle(val color: String) : Driveable {
 
 fun main(args: Array<String>) {
 
-    val car: Driveable = Car("blue")
+    val car = Car(Color.BLUE)
+    println(car.color)
     car.drive()
     val motorCycle: Driveable = MotorCycle("red")
     motorCycle.drive()
